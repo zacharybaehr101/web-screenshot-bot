@@ -1,0 +1,27 @@
+name: Daily Screenshot Scraper
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch:      # Allows you to click a button to run it manually
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install playwright pillow gspread oauth2client
+          playwright install-deps
+          playwright install chromium
+      - name: Run Scraper
+        run: python scraper.py
+      - name: Upload Thumbnails
+        uses: actions/upload-artifact@v3
+        with:
+          name: daily-scans
+          path: ./*_thumb.jpg
