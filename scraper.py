@@ -5,28 +5,43 @@ from PIL import Image
 
 def process_url(url, name):
     with sync_playwright() as p:
+        # 1. Launch browser
         browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+        
+        # 2. Handle Authentication (New block for GitHub Secret)
+        if "AUTH_JSON" in os.environ:
+            with open("auth.json", "w") as f:
+                f.write(os.environ["AUTH_JSON"])
+        
+        # 3. Setup context with storage_state
+        context_args = {}
+        if os.path.exists("auth.json"):
+            context_args["storage_state"] = "auth.json"
+            
+        context = browser.new_context(**context_args)
+        page = context.new_page()
+        
+        print(f"Navigating to {url}...")
         page.goto(url, wait_until="load")
 
-        # 1. Take initial "browser window" screenshot
+        # 4. Take initial screenshot
         page.screenshot(path=f"{name}_initial.jpg", type="jpeg", quality=80)
 
-        # 2. Timed 12-second scroll
+        # 5. Timed scroll
         start_time = time.time()
         while time.time() - start_time < 12:
             page.mouse.wheel(0, 500)
-            time.sleep(1) # Scroll every second
+            time.sleep(1)
         
-        # 3. Take second "after-scroll" screenshot
-       # Updated to capture the entire scrollable area of the website
-page.screenshot(path=f"{name}_scrolled.jpg", type="jpeg", quality=80, full_page=True)
+        # 6. Take FULL PAGE after-scroll screenshot
+        page.screenshot(path=f"{name}_scrolled.jpg", type="jpeg", quality=80, full_page=True)
         
-        # 4. Resize both to thumbnails for lighter storage
+        # 7. Resize to thumbnails
         for suffix in ["initial", "scrolled"]:
-            img = Image.open(f"{name}_{suffix}.jpg")
-            img.thumbnail((800, 800)) # Resizes maintaining aspect ratio
-            img.save(f"{name}_{suffix}_thumb.jpg", "JPEG", optimize=True)
+            if os.path.exists(f"{name}_{suffix}.jpg"):
+                img = Image.open(f"{name}_{suffix}.jpg")
+                img.thumbnail((800, 800))
+                img.save(f"{name}_{suffix}_thumb.jpg", "JPEG", optimize=True)
 
         browser.close()
         print(f"Finished {name}")
