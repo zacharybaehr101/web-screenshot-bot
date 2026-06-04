@@ -1,5 +1,6 @@
 import time
 import json
+import os
 from playwright.sync_api import sync_playwright
 from PIL import Image
 
@@ -8,7 +9,7 @@ def process_url(url, name):
         # 1. Launch browser
         browser = p.chromium.launch(headless=True)
         
-        # 2. Handle Authentication (New block for GitHub Secret)
+        # 2. Handle Authentication
         if "AUTH_JSON" in os.environ:
             with open("auth.json", "w") as f:
                 f.write(os.environ["AUTH_JSON"])
@@ -46,23 +47,18 @@ def process_url(url, name):
         browser.close()
         print(f"Finished {name}")
 
-# Load the session state
-context = browser.new_context(storage_state="auth.json")
-page = context.new_page()
-
-# Now, when you visit, you are already logged in!
-page.goto("https://www.linkedin.com/feed")
-
-# Test locally with one URL
+# Main entry point
 if __name__ == "__main__":
-    process_url("https://www.linkedin.com", "linkedin_test")
-
-    import json
-
-if __name__ == "__main__":
-    with open('sites.json', 'r') as f:
-        sites = json.load(f)
-    
-    for site in sites:
-        print(f"Starting {site['name']}...")
-        process_url(site['url'], site['name'])
+    if not os.path.exists('sites.json'):
+        print("Error: sites.json file not found.")
+    else:
+        with open('sites.json', 'r') as f:
+            sites = json.load(f)
+        
+        for site in sites:
+            print(f"Starting {site['name']}...")
+            try:
+                process_url(site['url'], site['name'])
+                time.sleep(5) # Pause to be safe
+            except Exception as e:
+                print(f"Error processing {site['name']}: {e}")
