@@ -19,7 +19,8 @@ def process_url(url, name):
             time.sleep(1) # Scroll every second
         
         # 3. Take second "after-scroll" screenshot
-        page.screenshot(path=f"{name}_scrolled.jpg", type="jpeg", quality=80)
+       # Updated to capture the entire scrollable area of the website
+page.screenshot(path=f"{name}_scrolled.jpg", type="jpeg", quality=80, full_page=True)
         
         # 4. Resize both to thumbnails for lighter storage
         for suffix in ["initial", "scrolled"]:
