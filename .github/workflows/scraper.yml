@@ -7,6 +7,8 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      AUTH_JSON: ${{ secrets.AUTH_JSON }} # Passes your cookie secret to the script
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
