@@ -31,6 +31,13 @@ page.screenshot(path=f"{name}_scrolled.jpg", type="jpeg", quality=80, full_page=
         browser.close()
         print(f"Finished {name}")
 
+# Load the session state
+context = browser.new_context(storage_state="auth.json")
+page = context.new_page()
+
+# Now, when you visit, you are already logged in!
+page.goto("https://www.linkedin.com/feed")
+
 # Test locally with one URL
 if __name__ == "__main__":
     process_url("https://www.linkedin.com", "linkedin_test")
