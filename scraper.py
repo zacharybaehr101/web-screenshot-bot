@@ -28,11 +28,16 @@ def process_url(url, name):
         # 4. Take initial screenshot
         page.screenshot(path=f"{name}_initial.jpg", type="jpeg", quality=80)
 
-        # 5. Timed scroll
+        # 5. Slow, deliberate scrolling to trigger lazy-loading
+        # We scroll in smaller increments and wait for a tiny bit between steps
+        total_scroll_time = 15  # Increased to 15 seconds
         start_time = time.time()
-        while time.time() - start_time < 12:
-            page.mouse.wheel(0, 500)
-            time.sleep(1)
+        
+        while time.time() - start_time < total_scroll_time:
+            # Scroll by a smaller amount (200px) instead of 500px
+            page.mouse.wheel(0, 200)
+            # Shorten the sleep for smoother movement
+            time.sleep(0.5)
         
         # 6. Take FULL PAGE after-scroll screenshot
         page.screenshot(path=f"{name}_scrolled.jpg", type="jpeg", quality=80, full_page=True)
