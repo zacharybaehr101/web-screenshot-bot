@@ -42,10 +42,15 @@ def process_url(url, name, cookie_path):
         
         # 7. Resize to thumbnails
         for suffix in ["initial", "scrolled"]:
-            if os.path.exists(f"{name}_{suffix}.jpg"):
-                img = Image.open(f"{name}_{suffix}.jpg")
+            file_path = f"{name}_{suffix}.jpg"
+            if os.path.exists(file_path):
+                img = Image.open(file_path)
                 img.thumbnail((800, 800))
-                img.save(f"{name}_{suffix}_thumb.jpg", "JPEG", optimize=True)
+                thumb_path = f"{name}_{suffix}_thumb.jpg"
+                img.save(thumb_path, "JPEG", optimize=True)
+                print(f"DEBUG: Saved thumbnail to {thumb_path}") # Add this!
+            else:
+                print(f"DEBUG: File {file_path} not found!") # Add this!
 
         browser.close()
         print(f"Finished {name}")
