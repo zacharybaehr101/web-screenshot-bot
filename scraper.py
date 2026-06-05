@@ -6,10 +6,8 @@ from PIL import Image
 
 def process_url(url, name, cookie_path):
     with sync_playwright() as p:
-        # Launch browser
         browser = p.chromium.launch(headless=True)
         
-        # Setup context arguments
         context_args = {}
         # Only use storage_state if cookie_path is provided and the file exists
         if cookie_path and os.path.exists(cookie_path):
@@ -18,7 +16,6 @@ def process_url(url, name, cookie_path):
         context = browser.new_context(**context_args)
         page = context.new_page()
         
-        # Set User-Agent to avoid bot detection
         page.set_extra_http_headers({
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
         })
@@ -29,13 +26,13 @@ def process_url(url, name, cookie_path):
         # 4. Take initial screenshot
         page.screenshot(path=f"{name}_initial.jpg", type="jpeg", quality=80)
 
-        # 5. Slow, deliberate scrolling to trigger lazy-loading
+        # 5. Slow, deliberate scrolling
         start_time = time.time()
         while time.time() - start_time < 15:
             page.mouse.wheel(0, 200)
             time.sleep(0.5)
         
-        # 6. Final scroll to bottom and screenshot
+        # 6. Final screenshot
         page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
         time.sleep(2)
         page.screenshot(path=f"{name}_scrolled.jpg", type="jpeg", quality=80, full_page=True)
