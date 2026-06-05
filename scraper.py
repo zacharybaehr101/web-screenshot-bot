@@ -4,9 +4,12 @@ import time
 from playwright.sync_api import sync_playwright
 
 def sanitize_cookies(cookies):
-    """Fixes cookie format errors before Playwright loads them."""
+    """Ensures all sameSite values are Strictly Lax, Strict, or None."""
+    allowed = ["Strict", "Lax", "None"]
     for cookie in cookies:
-        if cookie.get("sameSite") == "no_restriction":
+        samesite = cookie.get("sameSite")
+        # If it's not in our allowed list, force it to 'None'
+        if samesite not in allowed:
             cookie["sameSite"] = "None"
     return cookies
 
@@ -18,9 +21,9 @@ def process_url(url, name, cookie_path):
         if cookie_path and os.path.exists(cookie_path):
             with open(cookie_path, 'r') as f:
                 data = json.load(f)
-                # Unwrap if necessary
+                # Handle nested vs flat JSON structure
                 cookies = data["cookies"] if isinstance(data, dict) and "cookies" in data else data
-                # Sanitize the "sameSite" field
+                # Sanitize using the strict validator
                 cookies = sanitize_cookies(cookies)
                 context.add_cookies(cookies)
         
@@ -28,6 +31,7 @@ def process_url(url, name, cookie_path):
         print(f"Navigating to {url}...")
         page.goto(url, wait_until="networkidle")
 
+        # Scroll logic
         for i in range(5):
             page.evaluate("window.scrollBy(0, 800)")
             time.sleep(2)
