@@ -48,4 +48,8 @@ if __name__ == "__main__":
         sites = json.load(f)
     
     for site in sites:
-        process_url(site['url'], site['name'], site.get("cookies"))
+        try:
+            process_url(site['url'], site['name'], site.get("cookies"))
+        except Exception as e:
+            print(f"Error processing {site['name']}: {e}")
+            continue
