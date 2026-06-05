@@ -1,6 +1,6 @@
-import time
 import json
 import os
+import time
 from playwright.sync_api import sync_playwright
 from PIL import Image
 
@@ -46,27 +46,16 @@ def process_url(url, name, cookie_path):
             if os.path.exists(file_path):
                 img = Image.open(file_path)
                 img.thumbnail((800, 800))
-                thumb_path = f"{name}_{suffix}_thumb.jpg"
-                img.save(thumb_path, "JPEG", optimize=True)
-                print(f"DEBUG: Saved thumbnail to {thumb_path}") # Add this!
-            else:
-                print(f"DEBUG: File {file_path} not found!") # Add this!
+                img.save(f"{name}_{suffix}_thumb.jpg", "JPEG", optimize=True)
 
         browser.close()
         print(f"Finished {name}")
 
-# Main entry point
 if __name__ == "__main__":
-    if not os.path.exists('sites.json'):
-        print("Error: sites.json file not found.")
-    else:
-        with open('sites.json', 'r') as f:
-            sites = json.load(f)
-        
-        for site in sites:
-            print(f"Starting {site['name']}...")
-            try:
-                process_url(site['url'], site['name'])
-                time.sleep(5) # Pause to be safe
-            except Exception as e:
-                print(f"Error processing {site['name']}: {e}")
+    with open('sites.json', 'r') as f:
+        sites = json.load(f)
+    
+    for site in sites:
+        print(f"Starting {site['name']}...")
+        cookie_path = site.get("cookies")
+        process_url(site['url'], site['name'], cookie_path)
