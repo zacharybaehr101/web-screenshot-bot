@@ -29,7 +29,7 @@ def process_url(url, name, cookie_path):
         
         page = context.new_page()
         print(f"Navigating to {url}...")
-        page.goto(url, wait_until="networkidle")
+        page.goto(url, wait_until="domcontentloaded")
 
         # Scroll logic
         for i in range(5):
