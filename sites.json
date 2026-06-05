@@ -1,17 +1,9 @@
 [
-  {
-    "name": "linkedin_profile", 
-    "url": "https://www.linkedin.com/school/university-of-nebraska-lincoln/", 
-    "cookies": "cookies/linkedin.json"
-  },
-  {
-    "name": "ucla_facebook", 
-    "url": "https://www.facebook.com/UCLA/", 
-    "cookies": "cookies/fb_cookies.json"
-  },
-  {
-    "name": "purdue_engineering", 
-    "url": "https://engineering.purdue.edu/Engr", 
-    "cookies": null
-  }
+  {"name": "linkedin", "url": "https://www.linkedin.com/feed", "cookies": "cookies/linkedin.json"},
+  {"name": "facebook", "url": "https://www.facebook.com", "cookies": "cookies/facebook.json"},
+  {"name": "instagram", "url": "https://www.instagram.com", "cookies": "cookies/instagram.json"},
+  {"name": "tiktok", "url": "https://www.tiktok.com", "cookies": "cookies/tiktok.json"},
+  {"name": "twitter", "url": "https://x.com", "cookies": "cookies/x.json"},
+  {"name": "youtube", "url": "https://www.youtube.com", "cookies": "cookies/youtube.json"},
+  {"name": "purdue_engineering", "url": "https://engineering.purdue.edu/Engr", "cookies": null}
 ]
