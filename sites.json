@@ -1,5 +1,17 @@
 [
-  {"name": "linkedin_profile", "url": "https://www.linkedin.com/in/your-profile-url"},
-  {"name": "ucla_fb", "url": "https://www.facebook.com/uclafootball"},
-  {"name": "purdue_engineering", "url": "https://engineering.purdue.edu/Engr"}
+  {
+    "name": "linkedin_profile", 
+    "url": "https://www.linkedin.com/school/university-of-nebraska-lincoln/", 
+    "cookies": "cookies/linkedin.json"
+  },
+  {
+    "name": "ucla_facebook", 
+    "url": "https://www.facebook.com/UCLA/", 
+    "cookies": "cookies/fb_cookies.json"
+  },
+  {
+    "name": "purdue_engineering", 
+    "url": "https://engineering.purdue.edu/Engr", 
+    "cookies": null
+  }
 ]
