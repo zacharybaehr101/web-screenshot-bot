@@ -1,29 +1,35 @@
 name: Daily Screenshot Scraper
+
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight
-  workflow_dispatch:      # Allows you to click a button to run it manually
+    - cron: '0 9 * * *' # Runs every day at 9:00 AM
+  workflow_dispatch:      # Allows you to trigger it manually
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    env:
-      AUTH_JSON: ${{ secrets.AUTH_JSON }} # Passes your cookie secret to the script
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
       - name: Install dependencies
         run: |
           pip install playwright pillow
-          playwright install-deps
           playwright install chromium
-      - name: Run Scraper
+
+      - name: Run scraper
         run: python scraper.py
-      - name: Upload Thumbnails
+        env:
+          # If you have other secrets like credentials, include them here
+          AUTH_JSON: ${{ secrets.AUTH_JSON }}
+
+      - name: Upload all screenshots
         uses: actions/upload-artifact@v4
         with:
-          name: daily-scans
-          path: ./*_thumb.jpg
+          name: all-screenshots
+          path: ./*.jpg # This captures both _initial.jpg and _scrolled.jpg for all sites
