@@ -2,8 +2,8 @@ name: Daily Screenshot Scraper
 
 on:
   schedule:
-    - cron: '0 9 * * *' # Runs every day at 9:00 AM
-  workflow_dispatch:      # Allows you to trigger it manually
+    - cron: '0 9 * * *'
+  workflow_dispatch:
 
 jobs:
   scrape:
@@ -24,14 +24,15 @@ jobs:
 
       - name: Run scraper
         run: python scraper.py
+        continue-on-error: true # Ensures artifacts upload even if a site fails
         env:
-          # If you have other secrets like credentials, include them here
           AUTH_JSON: ${{ secrets.AUTH_JSON }}
 
-      - name: Upload screenshots
+      - name: List files for debugging
+        run: ls -R # Confirms exactly where files were created
+
+      - name: Upload all screenshots
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
-          path: |
-            ./*.jpg
-            ./scrape_log.csv
+          name: all-screenshots
+          path: ./*.jpg # Captures all jpg files in the root
