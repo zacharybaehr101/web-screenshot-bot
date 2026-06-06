@@ -1,97 +1,442 @@
 [
-  {"name": "mullen_high_school", "url": "https://www.mullenhigh.com", "cookies": null},
-  {"name": "regis_jesuit_high_school", "url": "https://www.regisjesuit.com", "cookies": null},
-  {"name": "st_marys_high_school", "url": "https://www.smhscs.org", "cookies": null},
-  {"name": "holy_family_high_school", "url": "https://www.holyfamilyhs.com", "cookies": null},
-  {"name": "regis_university", "url": "https://www.regis.edu", "cookies": null},
-  {"name": "gonzaga_preparatory_school", "url": "https://www.gprep.com", "cookies": null},
-  {"name": "seattle_preparatory_school", "url": "https://www.seattleprep.org", "cookies": null},
-  {"name": "bellarmine_preparatory_school", "url": "https://www.bellarmineprep.org", "cookies": null},
-  {"name": "odea_high_school", "url": "https://www.odea.org", "cookies": null},
-  {"name": "gonzaga_university", "url": "https://www.gonzaga.edu", "cookies": null},
-  {"name": "central_catholic_high_school", "url": "https://www.centralcatholichigh.org", "cookies": null},
-  {"name": "jesuit_high_school", "url": "https://www.jesuitportland.org", "cookies": null},
-  {"name": "marist_catholic_high_school", "url": "https://www.marisths.org", "cookies": null},
-  {"name": "blanchet_catholic_school", "url": "https://www.blanchetcatholicschool.com", "cookies": null},
-  {"name": "university_of_portland", "url": "https://www.up.edu", "cookies": null},
-  {"name": "ogorman_high_school", "url": "https://www.ogknights.org", "cookies": null},
-  {"name": "st_thomas_more_high_school", "url": "https://www.rccss.org", "cookies": null},
-  {"name": "roncalli_high_school", "url": "https://www.aberdeenroncalli.org", "cookies": null},
-  {"name": "mount_marty_university", "url": "https://www.mountmarty.edu", "cookies": null},
-  {"name": "presentation_college", "url": "https://www.presentation.edu", "cookies": null},
-  {"name": "dowling_catholic_high_school", "url": "https://www.dowlingcatholic.org", "cookies": null},
-  {"name": "xavier_high_school_ia", "url": "https://www.xaviertitans.org", "cookies": null},
-  {"name": "wahlert_catholic_high_school", "url": "https://www.holyfamilydbq.org/wchs/", "cookies": null},
-  {"name": "loras_college", "url": "https://www.loras.edu", "cookies": null},
-  {"name": "st_ambrose_university", "url": "https://www.sau.edu", "cookies": null},
-  {"name": "cretin_derham_hall", "url": "https://www.cdhals.org", "cookies": null},
-  {"name": "benilde_st_margarets", "url": "https://www.bsmschool.org", "cookies": null},
-  {"name": "totino_grace_high_school", "url": "https://www.totinograce.org", "cookies": null},
-  {"name": "university_of_st_thomas", "url": "https://www.stthomas.edu", "cookies": null},
-  {"name": "college_of_saint_benedict_saint_johns_university", "url": "https://www.csbsju.edu", "cookies": null},
-  {"name": "st_xavier_high_school", "url": "https://www.stxavier.org", "cookies": null},
-  {"name": "saint_ignatius_high_school", "url": "https://www.ignatius.edu", "cookies": null},
-  {"name": "archbishop_alter_high_school", "url": "https://www.alterhs.org", "cookies": null},
-  {"name": "university_of_dayton", "url": "https://www.udayton.edu", "cookies": null},
-  {"name": "xavier_university", "url": "https://www.xavier.edu", "cookies": null},
-  {"name": "st_louis_university_high_school", "url": "https://www.sluh.org", "cookies": null},
-  {"name": "rockhurst_high_school", "url": "https://www.rockhursths.edu", "cookies": null},
-  {"name": "chaminade_college_preparatory_school", "url": "https://www.chaminade-stl.org", "cookies": null},
-  {"name": "saint_louis_university", "url": "https://www.slu.edu", "cookies": null},
-  {"name": "rockhurst_university", "url": "https://www.rockhurst.edu", "cookies": null},
-  {"name": "bishop_miege_high_school", "url": "https://www.bishopmiege.com", "cookies": null},
-  {"name": "st_james_academy", "url": "https://www.sjakeepingfaith.org", "cookies": null},
-  {"name": "hayden_catholic_high_school", "url": "https://www.haydencatholic.org", "cookies": null},
-  {"name": "st_thomas_aquinas_high_school_ks", "url": "https://www.stasaints.net", "cookies": null},
-  {"name": "benedictine_college", "url": "https://www.benedictine.edu", "cookies": null},
-  {"name": "bishop_ireton_high_school", "url": "https://www.bishopireton.org", "cookies": null},
-  {"name": "paul_vi_catholic_high_school", "url": "https://www.paulvi.net", "cookies": null},
-  {"name": "benedictine_college_preparatory", "url": "https://www.benedictineprep.org", "cookies": null},
-  {"name": "catholic_high_school_va", "url": "https://www.chsvb.org", "cookies": null},
-  {"name": "marymount_university", "url": "https://www.marymount.edu", "cookies": null},
-  {"name": "cheverus_high_school", "url": "https://www.cheverus.org", "cookies": null},
-  {"name": "st_dominic_academy", "url": "https://www.stdomsyoumatter.org", "cookies": null},
-  {"name": "saint_josephs_college_of_maine", "url": "https://www.sjcme.edu", "cookies": null},
-  {"name": "holy_cross_school", "url": "https://www.holycrossmaine.org", "cookies": null},
-  {"name": "all_saints_catholic_school_me", "url": "https://www.allsaintsbangor.org", "cookies": null},
-  {"name": "delbarton_school", "url": "https://www.delbarton.org", "cookies": null},
-  {"name": "seton_hall_preparatory_school", "url": "https://www.shp.org", "cookies": null},
-  {"name": "don_bosco_preparatory_high_school", "url": "https://www.donboscoprep.org", "cookies": null},
-  {"name": "seton_hall_university", "url": "https://www.shu.edu", "cookies": null},
-  {"name": "saint_peter_s_university", "url": "https://www.saintpeters.edu", "cookies": null},
-  {"name": "bishop_kelly_high_school", "url": "https://www.bk.org", "cookies": null},
-  {"name": "holy_rosary_catholic_school", "url": "https://www.holyrosaryschoolif.org", "cookies": null},
-  {"name": "st_edwards_catholic_school", "url": "https://www.steds.org", "cookies": null},
-  {"name": "st_marys_catholic_school", "url": "https://www.stmarysmoscow.org", "cookies": null},
-  {"name": "all_saints_catholic_school_id", "url": "https://www.ascslewiston.org", "cookies": null},
-  {"name": "shanley_high_school", "url": "https://www.jp2schools.org", "cookies": null},
-  {"name": "st_marys_central_high_school", "url": "https://www.lightofchristschools.org", "cookies": null},
-  {"name": "bishop_ryan_catholic_school", "url": "https://www.bishopryan.com", "cookies": null},
-  {"name": "trinity_catholic_schools", "url": "https://www.trinitycatholicschools.com", "cookies": null},
-  {"name": "university_of_mary", "url": "https://www.umary.edu", "cookies": null},
-  {"name": "cardinal_newman_school", "url": "https://www.cnhs.org", "cookies": null},
-  {"name": "bishop_england_high_school", "url": "https://www.behs.com", "cookies": null},
-  {"name": "st_josephs_catholic_school", "url": "https://www.sjcatholicschool.org", "cookies": null},
-  {"name": "john_paul_ii_catholic_school", "url": "https://www.johnpaul2school.org", "cookies": null},
-  {"name": "the_oratory", "url": "https://www.rockhilloratory.org", "cookies": null},
-  {"name": "catholic_high_school_for_boys", "url": "https://www.lrchs.org", "cookies": null},
-  {"name": "mount_st_mary_academy", "url": "https://www.mtstmary.edu", "cookies": null},
-  {"name": "subiaco_academy", "url": "https://www.subiacoacademy.us", "cookies": null},
-  {"name": "sacred_heart_catholic_school_ar", "url": "https://www.sacredheartmorrilton.org", "cookies": null},
-  {"name": "st_joseph_high_school_ar", "url": "https://www.sjbulldogs.org", "cookies": null},
-  {"name": "fairfield_college_preparatory_school", "url": "https://www.fairfieldprep.org", "cookies": null},
-  {"name": "northwest_catholic_high_school", "url": "https://www.northwestcatholic.org", "cookies": null},
-  {"name": "sacred_heart_academy_ct", "url": "https://www.sacredhearthamden.org", "cookies": null},
-  {"name": "sacred_heart_university", "url": "https://www.sacredheart.edu", "cookies": null},
-  {"name": "fairfield_university", "url": "https://www.fairfield.edu", "cookies": null},
-  {"name": "marist_school", "url": "https://www.marist.com", "cookies": null},
-  {"name": "blessed_trinity_catholic_high_school", "url": "https://www.btcatholic.org", "cookies": null},
-  {"name": "st_pius_x_catholic_high_school", "url": "https://www.spx.org", "cookies": null},
-  {"name": "monsignor_donovan_catholic_high_school", "url": "https://www.mdchs.org", "cookies": null},
-  {"name": "aquinas_high_school", "url": "https://www.aquinashigh.org", "cookies": null},
-  {"name": "saint_ignatius_college_prep", "url": "https://www.ignatius.org", "cookies": null},
-  {"name": "benet_academy", "url": "https://www.benet.org", "cookies": null},
-  {"name": "loyola_academy", "url": "https://www.goramblers.org", "cookies": null},
-  {"name": "loyola_university_chicago", "url": "https://www.luc.edu", "cookies": null},
-  {"name": "depaul_university", "url": "https://www.depaul.edu", "cookies": null}
+  {
+    "name": "houston_tillotson_athletics",
+    "url": "https://hturams.com",
+    "cookies": null
+  },
+  {
+    "name": "jarvis_christian_athletics",
+    "url": "https://jculions.com",
+    "cookies": null
+  },
+  {
+    "name": "louisiana_shreveport_athletics",
+    "url": "https://lsusathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "louisiana_alexandria_athletics",
+    "url": "https://lsuarams.com",
+    "cookies": null
+  },
+  {
+    "name": "our_lady_of_the_lake_athletics",
+    "url": "https://ollusaintsathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "southwest_mustangs_athletics",
+    "url": "https://uswmustangs.com",
+    "cookies": null
+  },
+  {
+    "name": "texas_am_texarkana_athletics",
+    "url": "https://tamuteagles.com",
+    "cookies": null
+  },
+  {
+    "name": "texas_college_athletics",
+    "url": "https://texascollegesteers.com",
+    "cookies": null
+  },
+  {
+    "name": "xavier_louisiana_athletics",
+    "url": "https://xulagold.com",
+    "cookies": null
+  },
+  {
+    "name": "cal_maritime_athletics",
+    "url": "https://keelhaulers.com",
+    "cookies": null
+  },
+  {
+    "name": "uc_merced_athletics",
+    "url": "https://ucmercedbobcats.com",
+    "cookies": null
+  },
+  {
+    "name": "simpson_athletics",
+    "url": "https://simpsonredhawks.com",
+    "cookies": null
+  },
+  {
+    "name": "pacific_union_athletics",
+    "url": "https://pucpioneers.com",
+    "cookies": null
+  },
+  {
+    "name": "la_sierra_athletics",
+    "url": "https://lasierraathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "providence_christian_athletics",
+    "url": "https://seabeggars.com",
+    "cookies": null
+  },
+  {
+    "name": "westcliff_athletics",
+    "url": "https://westcliffathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "saint_katherine_athletics",
+    "url": "https://uskfirebirds.com",
+    "cookies": null
+  },
+  {
+    "name": "benedictine_mesa_athletics",
+    "url": "https://benredhawks.com",
+    "cookies": null
+  },
+  {
+    "name": "park_gilbert_athletics",
+    "url": "https://parkbuccaneers.com",
+    "cookies": null
+  },
+  {
+    "name": "embry_rizzle_athletics",
+    "url": "https://eraueagles.com",
+    "cookies": null
+  },
+  {
+    "name": "bard_athletics",
+    "url": "https://bardathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "clarkson_athletics",
+    "url": "https://clarksonathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "hobart_william_smith_athletics",
+    "url": "https://hwsathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "ithaca_athletics",
+    "url": "https://athletics.ithaca.edu",
+    "cookies": null
+  },
+  {
+    "name": "rensselaer_polytechnic_athletics",
+    "url": "https://rpiathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "rochester_institute_athletics",
+    "url": "https://ritathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "st_lawrence_athletics",
+    "url": "https://saintsathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "skidmore_athletics",
+    "url": "https://skidmoreathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "union_athletics",
+    "url": "https://unionathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "vassar_athletics",
+    "url": "https://vassarathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "buena_vista_athletics",
+    "url": "https://bvuathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "central_athletics",
+    "url": "https://athletics.central.edu",
+    "cookies": null
+  },
+  {
+    "name": "coe_athletics",
+    "url": "https://kohawkathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "dubuque_athletics",
+    "url": "https://udathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "loras_athletics",
+    "url": "https://duhawks.com",
+    "cookies": null
+  },
+  {
+    "name": "luther_athletics",
+    "url": "https://lutherathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "nebraska_wesleyan_athletics",
+    "url": "https://nwusports.com",
+    "cookies": null
+  },
+  {
+    "name": "simpson_iowa_athletics",
+    "url": "https://simpsonathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "wartburg_athletics",
+    "url": "https://go-knights.net",
+    "cookies": null
+  },
+  {
+    "name": "adams_state_athletics",
+    "url": "https://asugrizzlies.com",
+    "cookies": null
+  },
+  {
+    "name": "black_hills_state_athletics",
+    "url": "https://bhsuathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "chadron_state_athletics",
+    "url": "https://chadroneagles.com",
+    "cookies": null
+  },
+  {
+    "name": "colorado_christian_athletics",
+    "url": "https://ccucougars.com",
+    "cookies": null
+  },
+  {
+    "name": "colorado_mesa_athletics",
+    "url": "https://cmumavericks.com",
+    "cookies": null
+  },
+  {
+    "name": "colorado_school_of_mines_athletics",
+    "url": "https://minesathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "csu_pueblo_athletics",
+    "url": "https://gothunderwolves.com",
+    "cookies": null
+  },
+  {
+    "name": "msu_denver_athletics",
+    "url": "https://roadrunnersathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "new_mexico_highlands_athletics",
+    "url": "https://nmhuathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "regis_athletics",
+    "url": "https://regisathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "south_dakota_mines_athletics",
+    "url": "https://gorockers.com",
+    "cookies": null
+  },
+  {
+    "name": "uccc_springs_athletics",
+    "url": "https://gomountainlions.com",
+    "cookies": null
+  },
+  {
+    "name": "western_colorado_athletics",
+    "url": "https://gomountaineers.com",
+    "cookies": null
+  },
+  {
+    "name": "westminster_athletics",
+    "url": "https://westminstergriffins.com",
+    "cookies": null
+  },
+  {
+    "name": "alaska_anchorage_athletics",
+    "url": "https://goseawolves.com",
+    "cookies": null
+  },
+  {
+    "name": "alaska_fairbanks_athletics",
+    "url": "https://alaskananooks.com",
+    "cookies": null
+  },
+  {
+    "name": "central_washington_athletics",
+    "url": "https://wildcatsports.com",
+    "cookies": null
+  },
+  {
+    "name": "montana_state_billings_athletics",
+    "url": "https://msubsports.com",
+    "cookies": null
+  },
+  {
+    "name": "northwest_nazarene_athletics",
+    "url": "https://nnusports.com",
+    "cookies": null
+  },
+  {
+    "name": "saint_martins_athletics",
+    "url": "https://smupanthers.com",
+    "cookies": null
+  },
+  {
+    "name": "seattle_pacific_athletics",
+    "url": "https://spufalcons.com",
+    "cookies": null
+  },
+  {
+    "name": "simon_fraser_athletics",
+    "url": "https://athletics.sfu.ca",
+    "cookies": null
+  },
+  {
+    "name": "western_oregon_athletics",
+    "url": "https://wouwolves.com",
+    "cookies": null
+  },
+  {
+    "name": "western_washington_athletics",
+    "url": "https://wwuvikings.com",
+    "cookies": null
+  },
+  {
+    "name": "central_missouri_athletics",
+    "url": "https://ucmathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "central_oklahoma_athletics",
+    "url": "https://bronchosports.com",
+    "cookies": null
+  },
+  {
+    "name": "emporia_state_athletics",
+    "url": "https://esuhornets.com",
+    "cookies": null
+  },
+  {
+    "name": "fort_hays_state_athletics",
+    "url": "https://fhsuathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "lincoln_athletics",
+    "url": "https://lubluetigers.com",
+    "cookies": null
+  },
+  {
+    "name": "missouri_southern_athletics",
+    "url": "https://mssulions.com",
+    "cookies": null
+  },
+  {
+    "name": "missouri_western_athletics",
+    "url": "https://gogriffons.com",
+    "cookies": null
+  },
+  {
+    "name": "nebraska_kearney_athletics",
+    "url": "https://lopers.com",
+    "cookies": null
+  },
+  {
+    "name": "newman_athletics",
+    "url": "https://newmanjets.com",
+    "cookies": null
+  },
+  {
+    "name": "northeastern_state_athletics",
+    "url": "https://goriverhawksgo.com",
+    "cookies": null
+  },
+  {
+    "name": "northwest_missouri_state_athletics",
+    "url": "https://bearcatsports.com",
+    "cookies": null
+  },
+  {
+    "name": "rogers_state_athletics",
+    "url": "https://rsuhillcats.com",
+    "cookies": null
+  },
+  {
+    "name": "pittsburg_state_athletics",
+    "url": "https://pittstategorillas.com",
+    "cookies": null
+  },
+  {
+    "name": "washburn_athletics",
+    "url": "https://wusports.com",
+    "cookies": null
+  },
+  {
+    "name": "barry_athletics",
+    "url": "https://gobarrycanes.com",
+    "cookies": null
+  },
+  {
+    "name": "eckerd_athletics",
+    "url": "https://eckerdtritons.com",
+    "cookies": null
+  },
+  {
+    "name": "embry_riddle_florida_athletics",
+    "url": "https://erauathletics.com",
+    "cookies": null
+  },
+  {
+    "name": "florida_institute_of_technology_athletics",
+    "url": "https://floridatechsports.com",
+    "cookies": null
+  },
+  {
+    "name": "florida_southern_athletics",
+    "url": "https://fscmoccasins.com",
+    "cookies": null
+  },
+  {
+    "name": "lynn_athletics",
+    "url": "https://lynnfightingknights.com",
+    "cookies": null
+  },
+  {
+    "name": "nova_southeastern_athletics",
+    "url": "https://nsusharks.com",
+    "cookies": null
+  },
+  {
+    "name": "palm_beach_atlantic_athletics",
+    "url": "https://pbatritons.com",
+    "cookies": null
+  },
+  {
+    "name": "rollins_athletics",
+    "url": "https://rollinssports.com",
+    "cookies": null
+  },
+  {
+    "name": "saint_leo_athletics",
+    "url": "https://saintleolions.com",
+    "cookies": null
+  },
+  {
+    "name": "tampa_athletics",
+    "url": "https://tampapanthers.com",
+    "cookies": null
+  }
 ]
